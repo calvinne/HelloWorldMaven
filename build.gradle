@@ -15,34 +15,16 @@ group = 'com.example'
 version = 'V1'
 
 
-/* plugins {
-    id 'java-library'
-    id 'maven-publish'
-}*/
 
 repositories {
-    mavenLocal()
-    maven {
-        url = uri('https://repo.maven.apache.org/maven2/')
-    }
+    mavenCentral()
 }
 
 dependencies {
     testImplementation libs.junit.junit
 }
 
-group = 'com.test'
-version = '1.1.1-RELEASE'
-description = 'HelloWorldMaven'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
 
 test {
     // Specify the directory containing test classes
@@ -71,12 +53,4 @@ jacocoTestReport {
         xml.required = true
         html.required = true
     }
-}
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-
-tasks.withType(Javadoc) {
-    options.encoding = 'UTF-8'
 }
