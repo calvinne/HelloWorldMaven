@@ -15,10 +15,10 @@ group = 'com.example'
 version = 'V1'
 
 
-plugins {
+/* plugins {
     id 'java-library'
     id 'maven-publish'
-}
+}*/
 
 repositories {
     mavenLocal()
